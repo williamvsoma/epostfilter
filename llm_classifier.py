@@ -11,7 +11,7 @@ class ResultModel(BaseModel):
     result: is_spam
 
 def spam_classifier(txt) -> bool:
-    prompt = f'classify the following email as spam or not spam. Classify as smap only if you are confident: {txt}'
+    prompt = f'classify the following email as spam or not spam. Classify as spam only if you are confident: {txt}'
     response = ollama.chat(model=cfg.llm_model, messages=[
         {
             'role': 'user',
