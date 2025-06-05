@@ -1,6 +1,6 @@
-import config as cfg
-from llm_classifier import spam_classifier
-from authenticate import authenticate
+import epostfilter.config as cfg
+from epostfilter.llm_classifier import spam_classifier
+from epostfilter.authenticate import authenticate
 import base64
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -63,7 +63,7 @@ def main() -> None:
             )
             payload = full_message.get('payload', {})
             text = get_text_from_payload(payload)
-            is_spam = spam_classifier(text)
+            is_spam = spam_classifier(text) 
             print(is_spam)
             if is_spam:
                 service.users().messages().modify(

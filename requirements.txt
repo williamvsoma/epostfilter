@@ -1,0 +1,4 @@
+ollama
+google-api-python-client
+google-auth-oauthlib
+bs4

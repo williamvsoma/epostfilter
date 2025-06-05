@@ -1,0 +1,4 @@
+sender_email = '' # The email address you recieve from.
+scopes = [''] # Example: "https://www.googleapis.com/auth/gmail.modify"
+query = '' # filter what emails you want to feed into the model. Example: "in:inbox newer_than:1d"
+llm_model = '' # Name of Ollama model you want to use. Example: "llama3.2"
